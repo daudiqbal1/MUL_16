@@ -1,7 +1,7 @@
 ; -----------------------------------------------------------
 ; Microcontroller Based Systems Homework
 ; Author name: Iqbal Daud
-; Neptun code: X32SQC
+; Neptun code: ******
 ; -------------------------------------------------------------------
 ; Task description: 
 ;   Multiplication of two 16 bit unsigned integers being in the internal memory. 
