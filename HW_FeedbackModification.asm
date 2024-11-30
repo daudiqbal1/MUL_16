@@ -91,7 +91,7 @@ LOOP:
 ; OUTPUT(S): 
 ;   Result at the given address
 ; MODIFIES:
-;   R0, R1, R2, R3, R5, R6, PSW, A and B
+;   A and B
 ; -------------------------------------------------------------------
 
 MUL_U16:
