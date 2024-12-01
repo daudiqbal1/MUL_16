@@ -91,10 +91,20 @@ LOOP:
 ; OUTPUT(S): 
 ;   Result at the given address
 ; MODIFIES:
-;   PSW, R0, R1, R2, R3, R4, R5, A and B
+;    A and B
 ; -------------------------------------------------------------------
 
 MUL_U16:
+
+;Pushing the values of register in the stack.
+    PUSH AR0;
+    PUSH AR1;
+    PUSH AR2;
+    PUSH AR3;
+    PUSH AR4;
+    PUSH AR5;
+    PUSH AR6;
+    PUSH PSW;
 
 ;STEP1: Starting with the multiplication of INPUT1_L and INPUT2_L (bxd) 
 ;Storing the output in R3 and R4
@@ -168,6 +178,18 @@ MUL_U16:
     INC R0;
     MOV A, R3;
     MOV @R0, A;
+
+
+;Retrieving the values of the registers from the stack
+
+    POP PSW;
+    POP AR6;
+    POP AR5;
+    POP AR4;
+    POP AR3;
+    POP AR2;
+    POP AR1;
+    POP AR0;
 
 
 
